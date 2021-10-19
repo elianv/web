@@ -48,7 +48,7 @@ body .body {
 
 /* Begin Fonts */
 body {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif !important;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
@@ -71,7 +71,8 @@ h5 {
 	font-size: 18px;
 }
 p {
-	font: 14px/1.5em "Roboto";
+	font-size: 14px;
+	line-height: 140%;
 }
 .navbar-nav > li > a {
 	font-family: "Lato", Helvetica, Arial, sans-serif;
