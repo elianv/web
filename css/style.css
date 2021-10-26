@@ -172,13 +172,13 @@ section {
 	background-image: url(../img/logo-glc-navbar.svg);
 }
 .navbar-shrink .navbar-brand {
-	background-image: url(../img/logo.png);
+	background-image: url(../img/logo-glc-navbar.svg);
 }
 .navbar-transparent .navbar-brand {
-	background-image: url(../img/logo.png);
+	background-image: url(../img/logo-glc-navbar.svg);
 }
 .navbar-inverse .navbar-brand {
-	background-image: url(../img/logo.png);
+	background-image: url(../img/logo-glc-navbar.svg);
 }
 
 /* Navbar links */
