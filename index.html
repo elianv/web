@@ -69,8 +69,9 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a class="page-scroll" href="body">Inicio</a></li>
                             <li><a class="page-scroll" href="#about-section">Nosotros</a></li>
+                            <li><a class="page-scroll" href="#certificaciones-section">Certificaciones</a></li>
                             <li><a class="page-scroll" href="#testimonial-section">Valores</a></li>
-                            <!-- <li><a class="page-scroll" href="#portfolio-section">Works</a></li> -->
+                            
                             <li><a class="page-scroll" href="#team-section">Equipo</a></li>                            
                             <li><a class="page-scroll" href="#counter-section">Datos</a></li>
                             <li><a class="page-scroll" href="#contact-section">Contacto</a></li>
@@ -161,6 +162,54 @@
             </div>
         </section>
         <!-- End cta -->            
+
+
+            <!-- Begin Portfolio -->
+            <section id="certificaciones-section" class="page bg-style1">
+            	<div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="portfolio">
+                                <!-- Begin page header-->
+                                <div class="page-header-wrapper">
+                                    <div class="container">
+                                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                                            <h2>Certificaciones</h2>
+                                            <div class="devider"></div>
+                                            <p class="subtitle"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End page header-->
+                                <div class="portfoloi_content_area" >
+                                    <div class="portfolio_content">
+                                        <div class="row"  id="portfolio">
+
+                                            <div class="col-xs-12 col-sm-4 GraphicDesign"></div>
+
+                                            <div class="col-xs-12 col-sm-4">
+                                                <div class="portfolio_single_content">
+                                                    <img src="img/iso-9001.png" alt="title"/>
+                                                    <div>
+                                                        <a href="files/certificado_iso.pdf">ISO 9001</a>
+                                                        <span>Click para descargar certificado</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12 col-sm-4 responsive"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End portfolio -->
+
 
             <!-- Begin about section -->
 			<section id="about-section" class="page bg-style1">
@@ -637,20 +686,30 @@
                         	<div class="col-sm-6">
                                 <div class="contact-form">
                                 	<h4>Escribenos</h4>
-                                    <form role="form">
+                                    <form role="form" id="contact-form-id" action="form_submit.php" method="post">
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="T&uacute; nombre" required>
+                                            <input type="text" class="form-control input-lg" placeholder="T&uacute; nombre" name="nombre" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control input-lg" placeholder="E-mail" required>
+                                            <input type="email" class="form-control input-lg" placeholder="E-mail" name="email" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Motivo" required>
+                                            <input type="text" class="form-control input-lg" placeholder="Motivo" name="motivo" required>
                                         </div>
+
                                         <div class="form-group">
-                                            <textarea class="form-control input-lg" rows="5" placeholder="Mensaje" required></textarea>
+                                            <textarea class="form-control input-lg" rows="5" placeholder="Mensaje" name="mensaje" required></textarea>
                                         </div>
+
+                                        <!-- 
+                                            <div>
+                                                <a class="g-recaptcha" data-sitekey="6LcYbxUdAAAAAC8R-eL53XF1NrR_WW45bNuXo8G8" data-callback='onSubmit' data-action='submit'>Submit</a>
+                                        </div>
+                                        -->
+
                                         <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Enviar</button>
+                                        
+
                                     </form>
                                 </div>	
                             </div>
@@ -723,8 +782,12 @@
                                               
         </div><!-- body ends -->
         
-        
-        
+        <!-- CAPTCHA -->
+        <script>
+            function onSubmit(token) {
+              document.getElementById("contact-form-id").submit();
+            }
+        </script>
         
         <!-- Plugins JS -->
 		<script src="inc/jquery/jquery-1.11.1.min.js"></script>
@@ -742,9 +805,10 @@
 
 		<!-- Theme JS -->
 		<script src="js/theme.js"></script>
+        <!-- Captcha -->
+        <script src="https://www.google.com/recaptcha/api.js"></script>
 
     </body> 
         
             
 </html>
-;
