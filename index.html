@@ -650,7 +650,7 @@
                                         <div class="form-group">
                                             <textarea class="form-control input-lg" rows="5" placeholder="Mensaje" required></textarea>
                                         </div>
-                                        <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Enviar</button>
+                                        <button class="btn wow bounceInRight" data-wow-delay="0.8s" id="btn_submit">Enviar</button>
                                     </form>
                                 </div>	
                             </div>
@@ -742,6 +742,14 @@
 
 		<!-- Theme JS -->
 		<script src="js/theme.js"></script>
+
+        <script>
+            $('#btn_submit').click(function( event ) {
+                console.log('Capturado');
+                event.preventDefault();
+                window.alert('Gracias por contactarnos. Nos comunicaremos con ud.');
+            });
+        </script>
 
     </body> 
         
