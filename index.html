@@ -705,10 +705,8 @@
                                             <div>
                                                 <a class="g-recaptcha" data-sitekey="6LcYbxUdAAAAAC8R-eL53XF1NrR_WW45bNuXo8G8" data-callback='onSubmit' data-action='submit'>Submit</a>
                                         </div>
-                                        -->
 
-                                        <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Enviar</button>
-                                        
+                                        <button class="btn wow bounceInRight" data-wow-delay="0.8s" id="btn_submit">Enviar</button>
 
                                     </form>
                                 </div>	
@@ -807,6 +805,14 @@
 		<script src="js/theme.js"></script>
         <!-- Captcha -->
         <script src="https://www.google.com/recaptcha/api.js"></script>
+
+        <script>
+            $('#btn_submit').click(function( event ) {
+                console.log('Capturado');
+                event.preventDefault();
+                window.alert('Gracias por contactarnos. Nos comunicaremos con ud.');
+            });
+        </script>
 
     </body> 
         
